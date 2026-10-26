@@ -8,8 +8,8 @@ A personal collection of reusable coding standards and practical AI agent workfl
 
 | Skill | Version | Purpose |
 | --- | --- | --- |
-| [cpp-code-standard](skills/cpp-code-standard/SKILL.md) | 1.0.0 | Standards for writing, modifying, and reviewing C/C++ code |
-| [installer-extract](skills/installer-extract/SKILL.md) | 1.0.1 | Extract and deploy Windows applications, including update handling |
+| [cpp-code-standard](skills/cpp-code-standard/SKILL.md) | 1.0.1 | Standards for writing, modifying, and reviewing C/C++ code |
+| [installer-extract](skills/installer-extract/SKILL.md) | 1.0.2 | Extract and deploy Windows applications, including update handling |
 
 ## Install with one command
 

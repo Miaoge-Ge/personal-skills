@@ -8,8 +8,8 @@
 
 | 技能 | 版本 | 用途 |
 | --- | --- | --- |
-| [cpp-code-standard](skills/cpp-code-standard/SKILL.md) | 1.0.0 | C/C++ 代码编写、修改与审查规范 |
-| [installer-extract](skills/installer-extract/SKILL.md) | 1.0.1 | Windows 应用解包部署与更新处理 |
+| [cpp-code-standard](skills/cpp-code-standard/SKILL.md) | 1.0.1 | C/C++ 代码编写、修改与审查规范 |
+| [installer-extract](skills/installer-extract/SKILL.md) | 1.0.2 | Windows 应用解包部署与更新处理 |
 
 ## 一条命令安装
 
