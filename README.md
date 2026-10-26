@@ -4,47 +4,38 @@
 
 ## 技能
 
-| 技能 | 版本 | 用途 | 下载 |
-| --- | --- | --- | --- |
-| [cpp-code-standard](skills/cpp-code-standard/SKILL.md) | 1.0.0 | C/C++ 代码编写、修改与审查规范 | [ZIP](cpp-code-standard-1.0.0.zip) |
-| [installer-extract](skills/installer-extract/SKILL.md) | 1.0.1 | Windows 应用解包部署与更新处理 | [ZIP](installer-extract-1.0.1.zip) |
+| 技能 | 版本 | 用途 |
+| --- | --- | --- |
+| [cpp-code-standard](skills/cpp-code-standard/SKILL.md) | 1.0.0 | C/C++ 代码编写、修改与审查规范 |
+| [installer-extract](skills/installer-extract/SKILL.md) | 1.0.1 | Windows 应用解包部署与更新处理 |
 
 ## 一条命令安装
 
-需要已安装 Node.js（含 npm/npx）和 Git。
+需要 Node.js（含 npm/npx）和 Git。按使用的工具任选一条，将全部技能安装到用户级目录：
 
-将两个技能安装到 Codex 的用户级目录，供不同项目使用：
-
-```sh
-npx --yes skills add Miaoge-Ge/personal-skills --skill cpp-code-standard installer-extract --agent codex --global --yes
-```
-
-只安装其中一个：
+**Codex**
 
 ```sh
-npx --yes skills add Miaoge-Ge/personal-skills --skill cpp-code-standard --agent codex --global --yes
+npx --yes skills add Miaoge-Ge/personal-skills --skill '*' --agent codex --global --yes
 ```
 
-将技能名换成 `installer-extract` 即可安装另一个。移除 `--global` 则只安装到当前项目；使用其他支持的工具时，可将 `codex` 换成 `claude-code` 或 `cursor`。
-
-也可以交互式选择技能和目标工具：
+**Claude Code**
 
 ```sh
-npx skills add Miaoge-Ge/personal-skills
+npx --yes skills add Miaoge-Ge/personal-skills --skill '*' --agent claude-code --global --yes
 ```
+
+**Cursor**
+
+```sh
+npx --yes skills add Miaoge-Ge/personal-skills --skill '*' --agent cursor --global --yes
+```
+
+只装一个技能时，将 `'*'` 换成对应技能名；仅安装到当前项目时，移除 `--global`。
 
 ## 提示词安装
 
-在支持 `$skill-installer` 的 Codex 中，直接发送：
-
-```text
-$skill-installer 请从 https://github.com/Miaoge-Ge/personal-skills 安装以下两个技能到用户级技能目录：
-- skills/cpp-code-standard
-- skills/installer-extract
-如果已有同名技能，先比较版本，保留本地自定义修改。
-```
-
-其他具备联网和文件操作能力的 AI 编程工具可使用：
+也可以将下面的提示词发给具备联网和文件操作能力的编程助手：
 
 ```text
 请从 https://github.com/Miaoge-Ge/personal-skills 安装 skills/cpp-code-standard 和 skills/installer-extract。
@@ -52,7 +43,7 @@ $skill-installer 请从 https://github.com/Miaoge-Ge/personal-skills 安装以�
 如果已有同名技能，先比较版本，保留本地自定义修改。完成后报告安装位置和版本。
 ```
 
-Codex 会自动发现新技能；未出现时可重启。提示词安装方式参考[官方说明](https://learn.chatgpt.com/docs/build-skills)。
+Codex 中可在提示词前加 `$skill-installer`，调用内置安装技能。
 
 ## 使用示例
 
@@ -66,4 +57,4 @@ $installer-extract 检查这个 Windows 安装包，适合解包部署时帮我�
 
 ## 版本与维护
 
-`skills/` 保存技能源码，根目录 ZIP 为对应版本快照。版本号记录在各技能 `SKILL.md` 的 `metadata.version` 中；命令安装使用仓库当前版本，固定版本可下载表格中的 ZIP。
+`skills/` 保存技能源码，版本号记录在各技能 `SKILL.md` 的 `metadata.version` 中。命令安装使用仓库当前版本。
