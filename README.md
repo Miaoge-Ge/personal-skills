@@ -1,5 +1,7 @@
 # Personal Skills
 
+[简体中文](README.md) | [English](README.en.md)
+
 自用 AI 技能集：可复用的开发规范与实用工作流。采用 [Agent Skills](https://agentskills.io/specification) 格式，可通过 [Skills CLI](https://github.com/vercel-labs/skills) 安装，无需单独发布 npm 包。
 
 ## 技能
